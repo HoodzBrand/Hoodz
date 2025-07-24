@@ -385,3 +385,86 @@ header {
   color: #eeecec;
   margin-top: 10x;
 }
+
+
+
+/* 🔧 Ottimizzazione mobile con menu orizzontale visibile */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 0 0 0;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  .navbar .menu {
+    flex-direction: row;     /* 🔁 resta orizzontale */
+    flex-wrap: wrap;         /* ⬇️ se non ci sta, va a capo */
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .menu li a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .top-bar-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+  }
+
+  .top-left-image,
+  .top-right-links {
+    padding: 0;
+  }
+
+  .top-right-links a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+
+  .mega-menu {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .mega-column {
+    align-items: center;
+    text-align: center;
+  }
+
+  .image-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-row img {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .about-section h2 {
+    font-size: 20px;
+  }
+
+  .about-section p {
+    font-size: 14px;
+  }
+
+  .product-item img,
+  .lookbook-img img {
+    width: 100%;
+  }
+}
