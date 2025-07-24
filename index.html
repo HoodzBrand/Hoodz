@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>HOODZ – Urban Wear</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('particles.js loaded');
+  });
+</script>
+
+
+<body>
+ 
+  <div class="bg-animation">
+  <img src="icons/mini-logos.png" alt="Background Logos">
+</div>
+<div class="top-bar">
+  <div class="top-bar-content">
+    <div class="top-left-image">
+      <img src="icons/mini-logos.png" alt="Mini loghi">
+    </div>
+    <div class="top-right-links">
+      <a href="#">Instagram</a>
+      <a href="#">Contatti</a>
+      <a href="#">Accedi</a>
+    </div>
+  </div>
+</div>
+
+
+  <header>
+    <div class="logo-container">
+      <a href="index.html"><img src="logo/logo.png" alt="HOODZ Logo" class="logo"></a>
+    </div>
+
+<nav class="navbar">
+  <ul class="menu">
+    <li><a href="about.html">About</a></li> <!-- La storia e l'identità -->
+    
+    <li class="mega-dropdown" id="collezioni">
+      <a href="#">Collezioni</a>
+    </li>
+    
+    <li><a href="signature.html">Signature</a></li> <!-- Adesivi, drop, edizioni limitate -->
+    
+    <li><a href="lookbook.html">Lookbook</a></li> <!-- Galleria immagini/video -->
+  </ul>
+</nav>
+
+ </header>
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-column">
+        <h4>Uomo</h4>
+        <a href="#">T-shirt</a>
+        <a href="#">Felpe</a>
+   
+      </div>
+      <div class="mega-column">
+        <h4>Donna</h4>
+        <a href="#">T-shirt</a>
+         <a href="#">Felpe</a>
+        <a href="#">Top</a>
+       
+
+      </div>
+      <div class="mega-column">
+        <h4>Accessori</h4>
+        <a href="#">Cappelli</a>
+    
+        <a href="#">Calze</a>
+      </div>
+    </div>
+ 
+
+  <section class="hero">
+    <h1>Scopri la nuova collezione HOODZ fw25</h1>
+    <p>Stile. Qualità. <span id="changing-word">Identità.</span></p>
+
+   
+  </section>
+
+  <section class="showcase">
+  <div class="image-row">
+    <img src="img/hoodz1.jpg" alt="Look 1">
+    <img src="img/hoodz2.jpg" alt="Look 2">
+    <img src="img/hoodz3.jpg" alt="Look 3">
+  </div>
+</section>
+
+
+  <script>
+    const trigger = document.getElementById("collezioni");
+    const mega = document.getElementById("megaMenu");
+
+    trigger.addEventListener("mouseenter", () => {
+      mega.classList.add("show");
+    });
+
+    trigger.addEventListener("mouseleave", () => {
+      setTimeout(() => {
+        if (!mega.matches(":hover")) {
+          mega.classList.remove("show");
+        }
+      }, 200);
+    });
+
+    mega.addEventListener("mouseleave", () => {
+      mega.classList.remove("show");
+    });
+
+    mega.addEventListener("mouseenter", () => {
+      mega.classList.add("show");
+    });
+  </script>
+
+  <script>
+  const words = ["Identità.", "Esclusività.", "Eleganza.", "Visione.", "Confine."];
+  const span = document.getElementById("changing-word");
+  let index = 0;
+
+  setInterval(() => {
+    span.classList.add("fade-out");
+
+    setTimeout(() => {
+      index = (index + 1) % words.length;
+      span.textContent = words[index];
+      span.classList.remove("fade-out");
+    }, 400);
+  }, 3000);
+</script>
+
+
+
+
+</body>
+</html>
+
