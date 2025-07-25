@@ -400,6 +400,10 @@ header {
 
   .logo {
     height: 70px;
+
+  filter: drop-shadow(0 0 16px rgba(255, 0, 0, 0.5)); /* 🔴 Glow rosso */
+
+
   }
 
   .navbar .menu {
