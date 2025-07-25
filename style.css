@@ -364,7 +364,7 @@ header {
 
 .about-section {
   text-align: center;
-  padding: 20px 20px;
+  padding: 30px 15px;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -516,19 +516,20 @@ header {
     font-size: 1rem;
   }
 
-  .about-section {
-    padding: 30px 15px;
-  }
+.about-section {
+  padding: 20px 15px 30px 15px; /* 👈 Avvicina al menu sopra */
+}
 
   .about-section h2 {
-    font-size: 20px;
+    font-size: 21px;
     margin-bottom: 10px;
   }
 
   .about-section p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
+  font-size: 15px; /* 👈 leggermente più grande */
+  line-height: 1.7; /* 👈 più leggibile */
+}
+
 
   .image-row {
     flex-direction: column;
