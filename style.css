@@ -529,7 +529,11 @@ header {
   .about-section p {
   font-size: 15px; /* 👈 leggermente più grande */
   line-height: 1.7; /* 👈 più leggibile */
-   margin-bottom: 100px; /* 👈 Aggiunge spazio tra i paragrafi e il prossimo titolo */
+  
+}
+
+.about-section p + h2 {
+  margin-top: 30px;
 }
 
 
