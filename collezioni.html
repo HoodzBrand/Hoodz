@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Collezioni - HOODZ</title>
-  <link rel="stylesheet" href="style.css?v=1">
-  <script defer src="prodotti.js"></script>
-  <script defer src="collezioni.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collezioni – HOODZ</title>
+  <link rel="stylesheet" href="style.css?v=20" />
 </head>
 <body>
 
   <!-- Sfondo animato -->
-  <div class="bg-animation"></div>
+  <div class="bg-animation">
+    <img src="icons/mini-logos.png" alt="Background Logos">
+  </div>
 
   <!-- Top bar -->
   <div class="top-bar">
@@ -25,25 +25,137 @@
     </div>
   </div>
 
-  <!-- Header con logo e menu -->
+  <!-- Header -->
   <header>
     <div class="logo-container">
-      <a href="index.html"><img src="logo/logo.png" alt="HOODZ Logo" class="logo"></a>
+      <a href="index.html"><img src="logo/logo.png" alt="HOODZ Logo" class="logo" /></a>
     </div>
+
     <nav class="navbar">
       <ul class="menu">
         <li><a href="about.html">About</a></li>
-        <li><a href="collezioni.html">Collezioni</a></li>
+        <li class="mega-dropdown" id="collezioni"><a href="#">Collezioni</a></li>
         <li><a href="signature.html">Signature</a></li>
         <li><a href="lookbook.html">Lookbook</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Griglia prodotti dinamica -->
-  <section class="product-grid" id="product-grid">
-    <!-- I prodotti verranno caricati qui da JS -->
+  <!-- Mega menu -->
+  <div class="mega-menu" id="megaMenu">
+    <div class="mega-column">
+      <h4>Uomo</h4>
+      <a href="#">T-shirt</a>
+      <a href="#">Felpe</a>
+    </div>
+    <div class="mega-column">
+      <h4>Donna</h4>
+      <a href="#">Top</a>
+      <a href="#">Felpe</a>
+    </div>
+    <div class="mega-column">
+      <h4>Accessori</h4>
+      <a href="#">Cappelli</a>
+      <a href="#">Calze</a>
+    </div>
+  </div>
+
+  <!-- Collezioni dinamiche -->
+  <section class="collection-grid" id="productContainer">
+    <!-- I prodotti verranno caricati da JS -->
   </section>
+
+  <!-- Script per gestione mega menu -->
+  <script>
+    const trigger = document.getElementById("collezioni");
+    const mega = document.getElementById("megaMenu");
+
+    function isMobile() {
+      return window.innerWidth <= 768;
+    }
+
+    if (trigger && mega) {
+      let mobileOpen = false;
+
+      trigger.addEventListener("click", (e) => {
+        if (isMobile()) {
+          e.preventDefault();
+          mega.classList.toggle("show");
+          mobileOpen = !mobileOpen;
+        }
+      });
+
+      trigger.addEventListener("mouseenter", () => {
+        if (!isMobile()) {
+          mega.classList.add("show");
+        }
+      });
+
+      trigger.addEventListener("mouseleave", () => {
+        if (!isMobile()) {
+          setTimeout(() => {
+            if (!mega.matches(":hover")) {
+              mega.classList.remove("show");
+            }
+          }, 200);
+        }
+      });
+
+      mega.addEventListener("mouseleave", () => {
+        if (!isMobile()) {
+          mega.classList.remove("show");
+        }
+      });
+
+      mega.addEventListener("mouseenter", () => {
+        if (!isMobile()) {
+          mega.classList.add("show");
+        }
+      });
+    }
+  </script>
+
+  <!-- Script per prodotti dinamici -->
+  <script>
+    const products = [
+      {
+        name: "Felpa Urban Red",
+        description: "Felpa oversize con dettagli in rosso acceso.",
+        price: "59€",
+        images: ["img/felpa1a.jpg", "img/felpa1b.jpg"]
+      },
+      {
+        name: "Maglia Black Logo",
+        description: "T-shirt nera con logo HOODZ centrale.",
+        price: "39€",
+        images: ["img/maglia1a.jpg", "img/maglia1b.jpg"]
+      }
+      // 👈 Aggiungi altri prodotti qui
+    ];
+
+    const container = document.getElementById("productContainer");
+
+    products.forEach(product => {
+      const item = document.createElement("div");
+      item.className = "product-card";
+
+      let imagesHTML = "";
+      product.images.forEach(src => {
+        imagesHTML += `<img src="${src}" alt="${product.name}" />`;
+      });
+
+      item.innerHTML = `
+        <div class="image-slider">
+          ${imagesHTML}
+        </div>
+        <h3>${product.name}</h3>
+        <p>${product.description}</p>
+        <span class="price">${product.price}</span>
+      `;
+
+      container.appendChild(item);
+    });
+  </script>
 
 </body>
 </html>
