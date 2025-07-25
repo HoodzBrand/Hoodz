@@ -508,4 +508,27 @@ header {
   .lookbook-img img {
     width: 100%;
   }
+
+
+ .top-right-links a {
+    display: none;
+  }
+
+  .top-right-links a.accedi-only {
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .top-right-links {
+    justify-content: flex-end;
+  }
+
+  .top-bar-content {
+    justify-content: flex-end;
+  }
+
+  .top-left-image {
+    display: none;
+  }
+
 }
