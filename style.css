@@ -428,11 +428,11 @@ header {
   }
 
  @media (max-width: 768px) {
-.mega-menu {
-    flex-wrap: nowrap;
+  .mega-menu {
+    display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 40px;
+    gap: 20px;
     padding: 0;
     max-height: 0;
     opacity: 0;
@@ -443,19 +443,19 @@ header {
       opacity 0.4s ease,
       padding 0.3s ease,
       transform 0.3s ease;
+    text-align: center;
   }
 
   .mega-menu.show {
+    padding: 20px 10px;
     max-height: 1000px;
     opacity: 1;
-    padding: 20px 10px;
     transform: translateY(0);
   }
-}
 
   .mega-column {
-    flex: 0 0 auto;
-    text-align: center;
+    flex: 1;
+    min-width: 0;
   }
 
   .mega-column h4 {
