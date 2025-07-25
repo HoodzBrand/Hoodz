@@ -401,7 +401,7 @@ header {
   .logo {
     height: 70px;
 
-  filter: drop-shadow(0 0 16px rgba(255, 30, 0, 0.548)); /* 🔴 Glow rosso */
+  filter: drop-shadow(0 0 16px rgba(255, 30, 0, 0.63)); /* 🔴 Glow rosso */
 
 
   }
