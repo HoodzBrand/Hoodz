@@ -511,12 +511,15 @@ header {
   }
 
 
-  .top-bar-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 15px;
-  }
+.top-bar-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
 
   .top-left-image {
     display: block;
@@ -537,11 +540,14 @@ header {
   }
 
   .top-right-links a.accedi-only {
-    display: inline-block;
-    font-size: 14px;
-    color: #ccc;
-    text-decoration: none;
-  }
+  display: inline-block;
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: none;
+  white-space: nowrap; /* 👈 evita che il testo vada a capo */
+  overflow: visible;   /* 👈 evita il taglio */
+}
+
 
   .top-right-links a.accedi-only:hover {
     color: #fff;
