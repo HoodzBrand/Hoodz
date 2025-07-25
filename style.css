@@ -394,6 +394,10 @@ header {
     padding: 10px 0 0 0;
   }
 
+  .hero {
+  padding-top: 5px; /* 👈 Avvicina la scritta al menu */
+}
+
   .logo {
     height: 70px;
   }
