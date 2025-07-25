@@ -520,10 +520,11 @@ header {
   padding: 20px 15px 30px 15px; /* 👈 Avvicina al menu sopra */
 }
 
-  .about-section h2 {
-    font-size: 21px;
-    margin-bottom: 10px;
-  }
+.about-section h2 {
+  font-size: 20px;
+  margin-top: 20px; /* 👈 prima era 60px, ora molto più vicino */
+  margin-bottom: 10px;
+}
 
   .about-section p {
   font-size: 15px; /* 👈 leggermente più grande */
