@@ -510,30 +510,37 @@ header {
   }
 
 
+  .top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+  }
+
+  .top-left-image {
+    display: block;
+  }
+
+  .top-left-image img {
+    height: 24px;
+    max-width: 100%;
+  }
+
+  .top-right-links {
+    display: flex;
+  }
+
   .top-right-links a {
     display: none;
   }
 
   .top-right-links a.accedi-only {
     display: inline-block;
-    margin-left: auto; /* spinge "Accedi" a destra */
+    font-size: 14px;
+    /* opzionali: styling extra per “Accedi” */
+    padding: 6px 12px;
+    background: #fff;
+    color: #000;
+    border-radius: 4px;
   }
-
-  .top-left-image {
-    display: block; /* mantenere l’icona a sinistra */
-    padding-left: 15px;
-  }
-
-  .top-left-image img {
-    height: 22px;
-    max-width: 100%;
-  }
-
-  .top-bar-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* sinistra-dx */
-    padding: 8px 0;
-  }
-
 }
