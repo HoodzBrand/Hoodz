@@ -427,7 +427,6 @@ header {
     font-size: 14px;
   }
 
-@media (max-width: 768px) {
   .mega-menu {
     display: flex;
     flex-wrap: nowrap;
@@ -476,7 +475,7 @@ header {
     margin: 3px 0;
     text-align: center;
   }
-}
+
 
 
   .image-row {
