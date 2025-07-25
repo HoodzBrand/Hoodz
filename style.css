@@ -425,11 +425,11 @@ header {
   }
 
   .top-right-links a {
-    display: none;
+    display: none; /* Nasconde TUTTI */
   }
 
   .top-right-links a.accedi-only {
-    display: inline-block;
+    display: inline-block; /* Mostra solo ACCEDI */
     font-size: 14px;
     color: #ccc;
     text-decoration: none;
