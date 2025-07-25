@@ -510,25 +510,30 @@ header {
   }
 
 
- .top-right-links a {
+  .top-right-links a {
     display: none;
   }
 
   .top-right-links a.accedi-only {
     display: inline-block;
-    margin-left: auto;
-  }
-
-  .top-right-links {
-    justify-content: flex-end;
-  }
-
-  .top-bar-content {
-    justify-content: flex-end;
+    margin-left: auto; /* spinge "Accedi" a destra */
   }
 
   .top-left-image {
-    display: none;
+    display: block; /* mantenere l’icona a sinistra */
+    padding-left: 15px;
+  }
+
+  .top-left-image img {
+    height: 22px;
+    max-width: 100%;
+  }
+
+  .top-bar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* sinistra-dx */
+    padding: 8px 0;
   }
 
 }
