@@ -455,29 +455,35 @@ header {
     padding: 8px 12px;
   }
 
-.mega-menu {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  padding: 0;
-  margin: 0;
-  width: 100vw;
-  box-sizing: border-box;
-  opacity: 0;
-  max-height: 0;
-  transform: translateY(-20px); /* 👈 inizialmente spostato verso l’alto */
-  overflow: hidden;
-  background: rgba(51, 0, 0, 0.507);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
-  transition:
-    max-height 0.4s ease,
-    opacity 0.4s ease,
-    transform 0.4s ease,
-    padding 0.3s ease;
+@media (max-width: 768px) {
+  .mega-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  .mega-wrapper.show {
+    max-height: 1000px; /* Deve essere abbastanza alto per contenere tutto */
+  }
+
+  .mega-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    background: rgba(51, 0, 0, 0.507);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    box-sizing: border-box;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 
 .mega-menu.show {
   padding: 20px 0;
