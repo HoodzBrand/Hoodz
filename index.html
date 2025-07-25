@@ -91,29 +91,55 @@
 
 
   <script>
-    const trigger = document.getElementById("collezioni");
-    const mega = document.getElementById("megaMenu");
+  const trigger = document.getElementById("collezioni");
+  const mega = document.getElementById("megaMenu");
 
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
+  if (trigger && mega) {
+    let mobileOpen = false;
+
+    trigger.addEventListener("click", (e) => {
+      if (isMobile()) {
+        e.preventDefault();
+        mega.classList.toggle("show");
+        mobileOpen = !mobileOpen;
+      }
+    });
+
+    // Per desktop: manteniamo il comportamento hover
     trigger.addEventListener("mouseenter", () => {
-      mega.classList.add("show");
+      if (!isMobile()) {
+        mega.classList.add("show");
+      }
     });
 
     trigger.addEventListener("mouseleave", () => {
-      setTimeout(() => {
-        if (!mega.matches(":hover")) {
-          mega.classList.remove("show");
-        }
-      }, 200);
+      if (!isMobile()) {
+        setTimeout(() => {
+          if (!mega.matches(":hover")) {
+            mega.classList.remove("show");
+          }
+        }, 200);
+      }
     });
 
     mega.addEventListener("mouseleave", () => {
-      mega.classList.remove("show");
+      if (!isMobile()) {
+        mega.classList.remove("show");
+      }
     });
 
     mega.addEventListener("mouseenter", () => {
-      mega.classList.add("show");
+      if (!isMobile()) {
+        mega.classList.add("show");
+      }
     });
-  </script>
+  }
+</script>
+
 
   <script>
   const words = ["Identità.", "Esclusività.", "Eleganza.", "Visione.", "Confine."];
