@@ -522,12 +522,13 @@ header {
   }
 
   .top-left-image img {
-    height: 24px;
+    height: 22px;
     max-width: 100%;
   }
 
   .top-right-links {
     display: flex;
+    align-items: center;
   }
 
   .top-right-links a {
@@ -537,10 +538,11 @@ header {
   .top-right-links a.accedi-only {
     display: inline-block;
     font-size: 14px;
-    /* opzionali: styling extra per “Accedi” */
-    padding: 6px 12px;
-    background: #fff;
-    color: #000;
-    border-radius: 4px;
+    color: #ccc;
+    text-decoration: none;
+  }
+
+  .top-right-links a.accedi-only:hover {
+    color: #fff;
   }
 }
