@@ -456,15 +456,7 @@ header {
   }
 
 @media (max-width: 768px) {
-  .mega-wrapper {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-  }
 
-  .mega-wrapper.show {
-    max-height: 1000px; /* Deve essere abbastanza alto per contenere tutto */
-  }
 
   .mega-menu {
     display: flex;
@@ -482,7 +474,7 @@ header {
     opacity: 1;
     transform: translateY(0);
   }
-}
+
 
 
 .mega-menu.show {
