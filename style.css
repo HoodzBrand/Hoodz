@@ -389,48 +389,15 @@ header {
 
 
 /* 🔧 Ottimizzazione mobile con menu orizzontale visibile */
+/* 🔧 Ottimizzazione Mobile */
 @media (max-width: 768px) {
-
-  body {
-    padding-top: 70px; /* 👈 Spazio per la top-bar */
-  }
-
   header {
     padding: 10px 0 0 0;
   }
 
-  .hero {
-    padding-top: 5px; /* 👈 Avvicina la scritta al menu */
-  }
-
   .logo {
     height: 70px;
-    filter: drop-shadow(0 0 16px rgba(255, 30, 0, 0.548)); /* 🔴 Glow rosso */
-  }
-
-  .navbar .menu {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .menu li a {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  /* TOP BAR */
-  .top-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(3, 3, 3, 0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    filter: drop-shadow(0 0 16px rgba(255, 30, 0, 0.7)); /* 🔴 Glow rosso */
   }
 
   .top-bar-content {
@@ -438,7 +405,8 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding: 8px 15px;
+    padding: 0 15px;
+    width: 100%;
     box-sizing: border-box;
   }
 
@@ -473,7 +441,20 @@ header {
     color: #fff;
   }
 
-  /* MEGA MENU */
+  .navbar .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    margin: 8px 0;
+  }
+
+  .menu li a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
   .mega-menu {
     display: flex;
     flex-wrap: nowrap;
@@ -523,14 +504,8 @@ header {
     text-align: center;
   }
 
-  /* ALTRE SEZIONI */
-  .image-row {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .image-row img {
-    max-width: 100%;
+  .hero {
+    padding-top: 5px;
   }
 
   .hero h1 {
@@ -541,12 +516,27 @@ header {
     font-size: 1rem;
   }
 
+  .about-section {
+    padding: 30px 15px;
+  }
+
   .about-section h2 {
     font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .about-section p {
     font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .image-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-row img {
+    max-width: 100%;
   }
 
   .product-item img,
