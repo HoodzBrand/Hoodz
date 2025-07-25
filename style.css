@@ -431,17 +431,20 @@ header {
   .mega-menu {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    gap: 0;
+    gap: 40px;
     padding: 0;
-    margin: 0 auto;
-    max-width: 100%;
-    width: fit-content;
+    margin: 0;
+    width: 100vw; /* 👈 copre tutta la larghezza dello schermo */
+    box-sizing: border-box;
     opacity: 0;
     max-height: 0;
     transform: translateY(-10px);
     overflow: hidden;
+    background: rgba(51, 0, 0, 0.507); /* assicura colore anche in mobile */
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     transition:
       max-height 0.4s ease,
       opacity 0.4s ease,
@@ -474,6 +477,7 @@ header {
     text-align: center;
   }
 }
+
 
   .image-row {
     flex-direction: column;
