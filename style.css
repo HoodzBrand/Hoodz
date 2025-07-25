@@ -521,13 +521,13 @@ header {
 }
 
 .about-section h2 {
-  font-size: 20px;
+  font-size: 25px;
   margin-top: 20px; /* 👈 prima era 60px, ora molto più vicino */
   margin-bottom: 20px;
 }
 
   .about-section p {
-  font-size: 15px; /* 👈 leggermente più grande */
+  font-size: 17px; /* 👈 leggermente più grande */
   line-height: 1.7; /* 👈 più leggibile */
   
 }
