@@ -523,7 +523,7 @@ header {
 .about-section h2 {
   font-size: 20px;
   margin-top: 20px; /* 👈 prima era 60px, ora molto più vicino */
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
   .about-section p {
