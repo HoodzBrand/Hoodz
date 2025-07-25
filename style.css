@@ -456,43 +456,30 @@ header {
   }
 
   .mega-menu {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    box-sizing: border-box;
-    opacity: 0;
-    max-height: 0;
-    transform: translateY(-10px);
-    overflow: hidden;
-    background: rgba(51, 0, 0, 0.507);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
-    transition:
-    
-     max-height 0.6s ease-in-out,
-  opacity 0.5s ease-in-out,
-  padding 0.4s ease-in-out,
-  transform 0.4s ease-in-out;
-
-  }
-
-  .mega-menu.show {
-  padding: 20px 0;
-  max-height: 1000px;
-  opacity: 1;
-  transform: translateY(0);
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
   transition:
-  max-height 0.6s ease-in-out,
-  opacity 0.5s ease-in-out,
-  padding 0.4s ease-in-out,
-  transform 0.4s ease-in-out;
-
+    transform 0.4s ease,
+    opacity 0.4s ease;
+  height: auto;
+  overflow: hidden;
+  background: rgba(51, 0, 0, 0.507);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 0;
 }
+
+
+ .mega-menu.show {
+  transform: scaleY(1);
+  opacity: 1;
+  padding: 30px 0;
+}
+
 
 
   .mega-column {
