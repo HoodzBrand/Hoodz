@@ -47,7 +47,7 @@ if (trigger && mega) {
 }
 
 // ✅ Caricamento Prodotti dinamico SOLO su collezioni.html
-if (window.location.pathname.includes("collezioni.html")) {
+if (window.location.pathname.includes("collezioni")) {
   const urlParams = new URLSearchParams(window.location.search);
   const categoria = urlParams.get("categoria");
   const sottocategoria = urlParams.get("sottocategoria");
